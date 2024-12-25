@@ -82,6 +82,12 @@ public sealed partial class BluespaceLockerComponent : Component
     /// </summary>
     [DataField("behaviorProperties"), ViewVariables(VVAccess.ReadOnly)]
     public BluespaceLockerBehaviorProperties BehaviorProperties = new();
+
+    /// <summary>
+    /// Determines if the locker can travel on the arrivals shuttle
+    /// </summary>
+    [DataField("arrivalsBlacklist"), ViewVariables(VVAccess.ReadOnly)]
+    public bool ArrivalsBlacklist = true;
 }
 
 [DataDefinition]

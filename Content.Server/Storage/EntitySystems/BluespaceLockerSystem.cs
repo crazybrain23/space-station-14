@@ -47,6 +47,9 @@ public sealed class BluespaceLockerSystem : EntitySystem
 
         if (component.BehaviorProperties.BluespaceEffectOnInit)
             BluespaceEffect(uid, component, component, true);
+
+        if (component.ArrivalsBlacklist)
+            AddComp<ArrivalsBlacklistComponent>(uid);
     }
 
     public void BluespaceEffect(EntityUid effectTargetUid, BluespaceLockerComponent effectSourceComponent, BluespaceLockerComponent? effectTargetComponent, bool bypassLimit = false)
